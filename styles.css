@@ -741,18 +741,30 @@ body {
 
 .box-1 {
     background-color: greenyellow;
+    font-family: Georgia;
+    font-size: 24px;
+    color: #444;
 }
 
 .box-2 {
     background-color: orange;
+    font-family: Calibri;
+    font-size: 32px;
+    color: #844;
 }
 
 .box-3 {
     background-color: skyblue;
+    font-family: Tahoma;
+    font-size: 28px;
+    color: #484;
 }
 
 .box-4 {
     background-color: orangered;
+    font-family: Calibri;
+    font-size: 32px;
+    color: #844;
 }
 
 #result {

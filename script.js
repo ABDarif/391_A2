@@ -71,7 +71,7 @@ function changeStyle(box) {
         quoteContainer.style.borderColor = 'black';
         quoteContainer.style.backgroundColor = 'orange';
         quoteContainer.style.fontSize = '16px';
-        quoteContainer.style.fontFamily = 'Arial';
+        quoteContainer.style.fontFamily = 'Arial, sans-serif';
         quoteContainer.style.fontWeight = 'bold'; // Bold the letters
     }
     else if (box === 'box3') {
@@ -79,7 +79,7 @@ function changeStyle(box) {
         quoteContainer.style.borderColor = 'yellow';
         quoteContainer.style.backgroundColor = 'skyblue';
         quoteContainer.style.fontSize = '12px';
-        quoteContainer.style.fontFamily = 'Lucida Sans';
+        quoteContainer.style.fontFamily = 'Lucida Sans Unicode, sans-serif';
         quoteContainer.style.fontWeight = 'bold'; // Bold the letters
     }
     else {
@@ -87,9 +87,10 @@ function changeStyle(box) {
         quoteContainer.style.borderColor = 'purple';
         quoteContainer.style.backgroundColor = 'goldenrod';
         quoteContainer.style.fontSize = '18px';
-        quoteContainer.style.fontFamily = 'Times New Romans';
+        quoteContainer.style.fontFamily = 'Times New Roman, serif';
         quoteContainer.style.fontWeight = 'bold'; // Bold the letters
     }
+
 }
 
 function convert(conversionType, value) {
@@ -148,22 +149,26 @@ function capitalize() {
     document.getElementById('text-area').value = newLines.join('\n');
 }
 
-function sort(){
-    // rearranges the lines into sorted alphabetical order
+function sort() {
+    // Get the text from the text area
     var text = document.getElementById('text-area').value;
-    var lines = text.split('');
-    var newLines = [];
-    
-    for (var i = 0; i < lines.length; i++) {
-        newLines.push(lines[i].toLowerCase());
-        // let newLines = text.split('').sort().join('');
-    //     document.getElementById('text-area').value = newLines;
-    }
-    newLines.sort();
-    document.getElementById('text-area').value = newLines.join('');
-    // document.getElementById('text-area').value = text.split('').sort().join('');
-    
+
+    // Split the text into lines
+    var lines = text.split('\n');
+
+    // Sort the lines alphabetically
+    lines.sort(function(a, b) {
+        return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+
+    // Join the sorted lines back together
+    var sortedText = lines.join('\n');
+
+    // Set the sorted text back to the text area
+    document.getElementById('text-area').value = sortedText;
 }
+
+
 
 function reverse (){
     var text = document.getElementById('text-area').value;
