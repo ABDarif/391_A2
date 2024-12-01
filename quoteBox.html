@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <title> </title>
+
+    <!-- Placeholder for the sidebar -->
+    <div id="sidebar"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          fetch("sidebar.html")
+            .then(response => response.text())
+            .then(data => {
+              document.getElementById("sidebar").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading sidebar:", error));
+        });
+      </script>
+
+</head>
+
+<body onload="generateQuote()">
+    
+    <img id="logo" src="images/logo.png" alt="Logo">
+    <div id="quote-container1">
+
+    
+    <div class="quote-box-container">
+        
+        <div class="container">
+           
+            <div style="display:flex">
+                <div id="quote-container" class="quote-container">
+                    <span id="quote"></span>
+                </div>
+                <div class="">
+                    <div onclick="changeStyle('box1')" class="box">
+                        <div class="box-1"></div>
+                    </div>
+                    <div onclick="changeStyle('box2')" class="box">
+                        <div class="box-2"></div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <div onclick="changeStyle('box3')" class="box">
+                        <div class="box-3"></div>
+                    </div>
+                    <div onclick="changeStyle('box4')" class="box">
+                        <div class="box-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

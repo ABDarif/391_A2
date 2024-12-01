@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Placeholder for the sidebar -->
+    <div id="sidebar"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("sidebar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("sidebar").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading sidebar:", error));
+        });
+        </script>
+</head>
+
+<body >
+    
+    <div class="main-container1">
+        <img id="logo" src="images/logo.png" alt="Logo">
+        <div class="container">
+            <h2 class="sub-title"></h2>
+            <div class="magic-container1">
+                <div class="magic-container2">
+                    <div class="magic-container3">
+                        <div class="magic-container4">
+                <div class="magic-body">
+                    <textarea name="" id="text-area" cols="25" rows="12">
+                        Sample Item 1
+                        Sample Item 2
+                        Sample Item 3
+                        Sample Item 4
+                
+                        Sample Item 5
+                        Sample Item 6
+                
+                
+                        Sample Item 7
+                    </textarea>
+                    <!-- <ul>
+                        <li id="li-1" class="lists">Sample Item 1</li>
+                        <li id="li-2" class="lists">Sample Item 2</li>
+                        <li id="li-3" class="lists">Sample Item 3</li>
+                        <li id="li-4" class="lists">Sample Item 4</li>
+                        <li id="li-5" class="lists">Sample Item 5</li>
+                        <li id="li-6" class="lists">Sample Item 6</li>
+                        <li id="li-7" class="lists">Sample Item 7</li>
+                    </ul> -->
+                </div>
+                <div class="btn-container">
+                    <button onclick="deleteAll()">Clear it</button>
+                    <button onclick="capitalize()">Capitalize</button>
+                    <button onclick="sort()">Sort</button>
+                    <button onclick="reverse()">Reverse</button>
+                    <button onclick="stripBlank()">Strip Blank</button>
+                    <button onclick="addNumbers()">Add Numbers</button>
+                    <button onclick="shuffle()">Shuffle</button>
+                </div>
+            </div>    
+            </div>    
+            </div>   
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

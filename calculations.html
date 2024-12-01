@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Placeholder for the sidebar -->
+    <div id="sidebar"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("sidebar.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("sidebar").innerHTML = data;
+            })
+            .catch(error => console.error("Error loading sidebar:", error));
+        });
+        </script>
+</head>
+
+<body>
+
+ 
+    <div class="part-2-container">
+        <div class="container">
+            <h2 class="sub-title">CALCULATER</h2>
+        </div>
+        <table class="data-table">
+            <tr>
+                <td>Input Series of Numbers:</td>
+                <td><input onkeyup="calculate()" name="box1" type="text" id="box1" value="12, 12, 22, 9, 1, 20" /></td>
+            </tr>
+            <tr>
+                <td>Max :</td>
+                <td><div id="max">22</div></td>
+            </tr>
+            <tr>
+                <td>Min :</td>
+                <td><div id="min">1</div></td>
+            </tr>
+            <tr>
+                <td>Sum :</td>
+                <td><div id="sum">76</div></td>
+            </tr>
+            <tr>
+                <td>Average :</td>
+                <td><div id="avg">12.67</div></td>
+            </tr>
+            <tr>
+                <td>Reverse Order :</td>
+                <td><div id="reverse">20, 1, 9, 22, 12, 12</div></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

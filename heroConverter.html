@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Placeholder for the sidebar -->
+<div id="sidebar"></div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("sidebar.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("sidebar").innerHTML = data;
+        })
+        .catch(error => console.error("Error loading sidebar:", error));
+    });
+    </script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Converter</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <!-- Hero Converter -->
+    <div>
+        <div>
+            <div>
+                <h2>Weight Converter</h2>
+                <div>
+                    <label for="unit">Convert</label>
+                    <input type="text" id="unit" name="unit" value="1">
+                    <select id="converter">
+                        <option value="kg_to_lb">kg to lb</option>
+                        <option value="lb_to_kg">lb to kg</option>
+                    </select>
+                    <input type="submit" onclick="convert(converter.value, unit.value)" value="Go">
+                    <span id="result">0 pounds</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
