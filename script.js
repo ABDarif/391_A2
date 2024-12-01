@@ -44,7 +44,12 @@ document.querySelector('.sidebar-toggle').addEventListener('click', () => {
   
 
   function generateQuote() {
-    var quotes = ["Life is a box of chocolates", "", "Leave one wolf alive and the sheeps are never safe", "Marbo Ekhane Lash porbe Soshhane", " Bap ka ,Dada ka bhai ka , Sab ka badla lega tera Faizaaal", "Be yourself; everyone else is already taken.", "Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.", "Everybody is ignorant, only on different subjects.", "Jhinkuuuuuuuuu",  "Which would be worst ?To live as a monster or die as a good man"];
+    var quotes = ["Life is a box of chocolates", 
+        "Leave one wolf alive & the sheeps are never safe", 
+        "Be yourself. Everyone else is already taken", 
+        "Two things are infinite: the universe and human stupidity... And I'm not sure about the universe", 
+        "Everybody is ignorant, only on different subjects", 
+        "Which would be worst? To live as a monster or die as a good man"];
     var length = quotes.length;
     var number = Math.floor(Math.random() * (length - 1 - 0 + 1)) + 0;
     document.getElementById('quote').innerText = quotes[number];
