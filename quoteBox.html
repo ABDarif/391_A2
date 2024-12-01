@@ -5,29 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="styles.css">
-
     <title> </title>
 
     <!-- Placeholder for the sidebar -->
     <div id="sidebar"></div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-          fetch("sidebar.html")
+            fetch("sidebar.html")
             .then(response => response.text())
             .then(data => {
-              document.getElementById("sidebar").innerHTML = data;
+                document.getElementById("sidebar").innerHTML = data;
             })
             .catch(error => console.error("Error loading sidebar:", error));
         });
-      </script>
+    </script>
 
 </head>
 
 <body onload="generateQuote()">
     
-    <img id="logo" src="images/logo.png" alt="Logo">
     <div id="quote-container1">
 
     
