@@ -64,7 +64,7 @@ function changeStyle(box) {
         quoteContainer.style.backgroundColor = 'greenyellow';
         quoteContainer.style.fontSize = '14px';
         quoteContainer.style.fontFamily = 'Serif';
-        quoteContainer.style.fontWeight = 'bold'; // Bold the letters
+        quoteContainer.style.fontWeight = 'bold';
     }
     else if (box === 'box2') {
         quoteContainer.style.color = 'black';
@@ -72,7 +72,7 @@ function changeStyle(box) {
         quoteContainer.style.backgroundColor = 'orange';
         quoteContainer.style.fontSize = '16px';
         quoteContainer.style.fontFamily = 'Arial, sans-serif';
-        quoteContainer.style.fontWeight = 'bold'; // Bold the letters
+        quoteContainer.style.fontWeight = 'bold';
     }
     else if (box === 'box3') {
         quoteContainer.style.color = 'yellow';
@@ -80,7 +80,7 @@ function changeStyle(box) {
         quoteContainer.style.backgroundColor = 'skyblue';
         quoteContainer.style.fontSize = '12px';
         quoteContainer.style.fontFamily = 'Lucida Sans Unicode, sans-serif';
-        quoteContainer.style.fontWeight = 'bold'; // Bold the letters
+        quoteContainer.style.fontWeight = 'bold'; 
     }
     else {
         quoteContainer.style.color = 'purple';
@@ -88,7 +88,7 @@ function changeStyle(box) {
         quoteContainer.style.backgroundColor = 'goldenrod';
         quoteContainer.style.fontSize = '18px';
         quoteContainer.style.fontFamily = 'Times New Roman, serif';
-        quoteContainer.style.fontWeight = 'bold'; // Bold the letters
+        quoteContainer.style.fontWeight = 'bold'; 
     }
 
 }
@@ -100,11 +100,9 @@ function convert(conversionType, value) {
 
     // Perform the conversion based on the conversionType
     if (conversionType === "kg_to_lb") {
-        // Kilograms to Pounds conversion
         result = value * 2.20462;
         document.getElementById("result").innerText = result.toFixed(2) + " pounds";
     } else if (conversionType === "lb_to_kg") {
-        // Pounds to Kilograms conversion
         result = value * 0.453592;
         document.getElementById("result").innerText = result.toFixed(2) + " kilograms";
     }
@@ -112,10 +110,10 @@ function convert(conversionType, value) {
 function calculate() {
     
     let input = document.getElementById("box1").value;
-
     
-    let numbers = input.split(",").map(Number);
+    let numbers_temp = input.split(",");
 
+    numbers = numbers_temp.filter(x=>!isNaN(Number(x)))
     
     let max = Math.max(...numbers);
     let min = Math.min(...numbers);
